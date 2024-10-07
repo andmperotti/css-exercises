@@ -8,16 +8,20 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
 
 .para {
   font-size: 22px;
 }
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+/* The problem here is that the second paragraph element is receiving the 'para' class styling and we want 'small-para' class styling to overtake it, you could add a p before the .small-para selector giving that rule more specificity, or like we did above, move the small-para class rule below the para class rule */
 
-.confirm {
+
+
+
+#confirm-button.confirm {
   background: green;
   color: white;
   font-weight: bold;
@@ -28,8 +32,13 @@ body {
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
+/* The problem here is that the first button element in the html needs to have a green background, with white text, and a bold font-weight, however the 'confirm' class has the same specificity score as the 'button' class and the 'button' class is applied to both button elements. You could either move the confirm class rule below the button rule which would grant the overriding via cascade to the 'confirm' class, or add an id like above to the confirm class selector giving it more specificity and therefore ignores the button class following it aka cascade, however doing this makes the confirm class not modular */
 
-.child {
+
+
+
+
+.child.text {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
@@ -40,3 +49,5 @@ div.text {
   font-size: 22px;
   font-weight: 100;
 }
+
+/* The problem here is that div.text is using 1 more selector than the child class rule declaration, and to fix this we could add text class as a chained selector to the child class rule, or we could move the child class rule declaration below the div.text rule declaration and add to it div element selector as well since that will make the 2 rules specificity scores the same and the cascade would take over after that and apply div.child instead of div.text */
