@@ -27,3 +27,67 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+
+
+
+
+
+/* my changes below here */
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.footer {
+  justify-content: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.sidebar a{
+  font-size: 24px;
+  color: white;
+  text-decoration: none;  
+}
+
+.sidebar ul{
+  list-style-type: none;
+
+}
+
+.card-container {
+  height: 100%;
+  flex-grow: 1;    
+  padding: 48px;
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  width: 350px;
+  height: 200px;
+  padding: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+}
