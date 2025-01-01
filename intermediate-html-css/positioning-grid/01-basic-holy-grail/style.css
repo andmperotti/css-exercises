@@ -56,7 +56,7 @@ html {
   gap: 15px;
 }
 
-.header {
+/* .header {
   grid-area: 1/1/2/-1;
 }
 .sidebar {
@@ -70,4 +70,14 @@ html {
 }
 .footer {
   grid-area: -2/1/-1/-1;
+} */
+
+.header {
+  grid-column: 1/3
+}
+.sidebar {
+  grid-row: 2/4
+}
+.footer {
+  grid-column: 1/-1;
 }
