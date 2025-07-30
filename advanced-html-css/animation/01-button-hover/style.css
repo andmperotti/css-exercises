@@ -17,3 +17,15 @@ button {
   padding: 16px 24px;
   text-align: center;
 }
+
+/* attempt */
+
+/*add transition so effect happens over a duration and in a specific manner via the timing function, instead of instantly which would have happened with no duration*/
+button {
+    transition: transform .3s ease-in-out;
+}
+
+/*apply transform of scale to button on hover psuedo class selector*/
+button:hover {
+    transform: scale(1.2);
+}

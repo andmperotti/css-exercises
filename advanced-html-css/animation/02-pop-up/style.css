@@ -61,3 +61,53 @@ button {
 .backdrop.show {
   opacity: 30%;
 }
+
+
+/* attempt */
+/* .popup-modal {
+    transform: translate(-50%, -150%);
+}
+
+.popup-modal.show {
+    animation: slide-down .75s forwards;
+
+}
+
+.backdrop.show {
+    background-color: gray;
+    opacity: 1;
+}
+
+@keyframes slide-down{
+    100%{
+        transform: translate(-50%,-50%);
+            opacity: 1;
+
+    }
+} */
+
+/*animation for closing/hiding modal, cant quite get it correct */
+/* @keyframes slide-up {
+    0%{
+        transform: translate(-50%, 50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-30%, -150%);
+        opacity: 0;
+    }
+} */
+
+.popup-modal {
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+/* This rule initially changes/resets where this element is positioned using a translate at load. And this rule tells the page that popup-modal does have a transition over 2 properties, a transform and opacity, however I don't understand how opacity is changed as it is not declared in the popup-modal .show class rule below... */
+
+.popup-modal.show {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+/* So this is going to move the popup-modal down when the .show class is added to it */
+
+/* ah, my problem was that I didn't see the opacity property value changes in the last 2 rules, sadly I assumed that that I was going to write those in, oh well. Also I assumed that there was a background color of gray being used somewhere and had no inkling that a color of black with an opacity of 30% would result in a gray.*/
